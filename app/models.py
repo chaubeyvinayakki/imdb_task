@@ -7,7 +7,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     """
     Store User account details.
     """
-    username = models.CharField('username', max_length=75, unique=True,)
+    username = models.CharField('username', max_length=85, unique=True,)
     name = models.CharField('name', max_length=80, null=True, blank=True)
     email = models.EmailField('email address', unique=True)
     is_staff = models.BooleanField('staff status', default=False,
@@ -38,7 +38,7 @@ class GenreName(models.Model):
     """
     GenreName model used to save the Genre of the movie
     """
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=300)
 
     class Meta:
         verbose_name = "genre_name"
@@ -51,10 +51,10 @@ class MovieDetail(models.Model):
     """
     MovieDetail model used to save the Movie details
     """
-    name = models.CharField(max_length=200, blank=True, null=True)
+    name = models.CharField(max_length=300, blank=True, null=True)
     imdb_score = models.FloatField(blank=True, null=True)
     popularity = models.FloatField(blank=True, null=True)
-    director = models.CharField(max_length=200, blank=True, null=True)
+    director = models.CharField(max_length=300, blank=True, null=True)
     genre = models.ManyToManyField(GenreName)
 
     class Meta:
