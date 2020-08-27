@@ -1,3 +1,3 @@
 
 
-web: gunicorn imdb_task.asgi --log-file -
+web: gunicorn imdb_task.wsgi --log-file -
