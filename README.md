@@ -20,6 +20,11 @@ IMDB
 
     python manage.py runserver
 
+## Create superuser
+    python manage.py createsuperuser
+
+    to access admin api please create auth token for the superusser from the admin panel. 
+
 ## Routes used to search the movie info:
     To search movie by name : http://localhost:8000/api//movie-detail/?name=sholay
     To search movie by director name : http://localhost:8000/api//movie-detail/?director=sholay
@@ -35,3 +40,10 @@ IMDB
     4. For search part we can also implement eastic search for the fast retreival of tha data, in django we can do this by using elasticsearch-dsl module.    
     5. We can add load blanacer on server.
     6. Split the services into micro services so that if one server goes down others will run.  
+
+
+## heroku deployment
+    Project is deployed on heroku please find the url
+    https://imdbpythonic.herokuapp.com/api/
+    
+    Database is not configured on heroku, as i have used sqlite locally.
